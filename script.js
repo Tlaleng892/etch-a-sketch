@@ -18,15 +18,10 @@ function createGrid(size) {
         div.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
       } else if (mode === 'eraser') {
         div.style.backgroundColor = 'white';
-        div.style.opacity = '1';
       } else if (mode === 'picker') {
         div.style.backgroundColor = chosenColor;
       } else {
         div.style.backgroundColor = 'black';
-      }
-      let opacity = parseFloat(div.style.opacity) || 0;
-      if (mode !== 'eraser' && opacity < 1) {
-        div.style.opacity = opacity + 0.1;
       }
     });
     container.appendChild(div);
