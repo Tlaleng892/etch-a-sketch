@@ -10,9 +10,20 @@ function makeGrid(size) {
     div.classList.add("square");
     div.style.width = squareSize + "px";
     div.style.height = squareSize + "px";
+    div.style.opacity = "0";
 
     div.addEventListener("mouseover", function() {
-      div.style.backgroundColor = "hotpink";
+      // Rainbow color!
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
+      div.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+      // Get darker each time!
+      let currentOpacity = Number(div.style.opacity);
+      if (currentOpacity < 1) {
+        div.style.opacity = currentOpacity + 0.1;
+      }
     });
 
     container.appendChild(div);
