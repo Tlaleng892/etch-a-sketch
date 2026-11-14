@@ -10,14 +10,26 @@
   <div class="controls">
     <button id="blackBtn">Black</button>
     <button id="rainbowBtn">Rainbow 🌈</button>
+    <button id="shadingBtn">Shading ✏️</button>
     <button id="eraserBtn">Eraser 🧹</button>
     <button id="clearBtn">Clear</button>
-    <input type="color" id="colorPicker" value="#ff00ff">
-    <button id="newGridBtn">New Grid!</button>
+    <button id="gridBtn">Grid Lines: ON</button>
     <button id="saveBtn">Save 📸</button>
   </div>
 
-  <div id="container" style="width:500px;height:500px;margin:0 auto;display:flex;flex-wrap:wrap;background-color:white;border:2px solid black;"></div>
+  <div class="controls">
+    <label>Draw Colour:</label>
+    <input type="color" id="colorPicker" value="#ff00ff">
+    <label>Page Colour:</label>
+    <input type="color" id="bgPicker" value="#ffc0cb">
+  </div>
+
+  <div class="controls">
+    <label>Grid Size: <span id="sizeLabel">16 x 16</span></label><br>
+    <input type="range" id="sizeSlider" min="1" max="64" value="16">
+  </div>
+
+  <div id="container"></div>
 
   <script src="script.js"></script>
 </body>
