@@ -9,13 +9,18 @@ h1 {
 }
 
 .controls {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .controls button, .controls input {
   padding: 6px 10px;
   margin: 3px;
   font-size: 14px;
+  cursor: pointer;
+}
+
+#sizeSlider {
+  width: 300px;
   cursor: pointer;
 }
 
@@ -33,4 +38,8 @@ h1 {
   box-sizing: border-box;
   border: 1px solid #eeeeee;
   background-color: white;
+}
+
+.square.no-grid {
+  border: none;
 }
